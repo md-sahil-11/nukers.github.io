@@ -1,0 +1,677 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background: #121a27;
+}
+
+body .circle {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 0px 4px #54d7e4;
+          box-shadow: 0px 0px 4px #54d7e4;
+}
+
+body main .menu {
+  font-family: Raleway, "Montserrat", sans-serif;
+  position: fixed;
+  top: -2%;
+  right: 40px;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  list-style-type: none;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+body main .menu li {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  padding: 0px 32px;
+}
+
+body main .menu li a {
+  --fill-color: #e95499;
+  position: relative;
+  display: block;
+  padding: 4px 0;
+  font: 700 32px Raleway, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px var(--fill-color);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, var(--fill-color))) left/0 no-repeat;
+  background: linear-gradient(var(--fill-color) 0 100%) left/0 no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+body main .menu li a:hover {
+  background-size: 100%;
+}
+
+@media (max-width: 816px) {
+  body main .menu li a {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 816px) {
+  body main .menu {
+    right: 20px;
+  }
+}
+
+body main #landing {
+  position: absolute;
+  top: 0%;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+body main #landing .content__title {
+  -webkit-transform: perspective(400px) rotateY(-65deg);
+          transform: perspective(400px) rotateY(-65deg);
+}
+
+body main #about {
+  padding: 32px 32px 0px;
+  width: 100%;
+  height: 800px;
+  background: #121a27;
+  letter-spacing: 1.2px;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  -webkit-transform: translateY(100vh);
+          transform: translateY(100vh);
+  z-index: 0;
+  -webkit-transition: 320ms ease-in;
+  transition: 320ms ease-in;
+}
+
+@media (max-width: 500px) {
+  body main #about {
+    height: 730px;
+  }
+}
+
+body main #about .page {
+  width: 100vw;
+}
+
+body main #about .page img {
+  margin: 20vh 0 0 10vw;
+  z-index: 0;
+  width: 500px;
+}
+
+@media (max-width: 816px) {
+  body main #about .page img {
+    width: 350px;
+    margin-left: 0px;
+  }
+}
+
+body main #about .head {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 80px;
+  min-width: 40vw;
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  -webkit-transform: translate(-70%, -30%);
+          transform: translate(-70%, -30%);
+  z-index: 5;
+}
+
+body main #about .head span {
+  color: transparent;
+  -webkit-text-stroke: 2px #54d7e4;
+  cursor: pointer;
+}
+
+@media (max-width: 1336px) {
+  body main #about .head {
+    -webkit-transform: translate(-60%, -30%);
+            transform: translate(-60%, -30%);
+  }
+}
+
+@media (max-width: 1120px) {
+  body main #about .head {
+    line-height: 70px;
+    min-width: 50vw;
+  }
+}
+
+@media (max-width: 816px) {
+  body main #about .head {
+    left: 50%;
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
+  }
+}
+
+@media (max-width: 500px) {
+  body main #about .head {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+
+body main #about img {
+  width: 500px;
+}
+
+body main #about .nuke {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 100px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+body main #about .love {
+  width: 300px;
+  opacity: 0;
+  position: absolute;
+  left: 20%;
+  top: 30%;
+  z-index: 0;
+}
+
+body main #about .unique {
+  width: 420px;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  z-index: 0;
+}
+
+body main #about .idea {
+  width: 300px;
+  opacity: 0;
+  position: absolute;
+  left: 20%;
+  top: 70%;
+  z-index: 1;
+}
+
+body main #about .work {
+  width: 400px;
+  opacity: 0;
+  position: absolute;
+  left: 60%;
+  top: 10%;
+  z-index: 1;
+}
+
+body main #work {
+  width: 100vw;
+  background: #121a27;
+  display: none;
+  overflow-x: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: auto;
+  white-space: nowrap;
+  position: relative;
+  overflow-y: hidden;
+}
+
+body main #work .scrollright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  color: #54d7e4;
+  position: absolute;
+  left: 20%;
+  bottom: 10%;
+}
+
+body main #work .page {
+  margin: auto 32px;
+  font-size: 200px;
+  font-weight: 700;
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-text-stroke: 4px #e95499;
+}
+
+@media (max-width: 1336px) {
+  body main #work .page {
+    font-size: 150px;
+  }
+}
+
+@media (max-width: 500px) {
+  body main #work .page {
+    font-size: 110px;
+  }
+}
+
+body main #work .works {
+  display: inline-block;
+}
+
+body main #work .works li {
+  position: relative;
+  padding: 0px 60px 60px;
+  display: inline-block;
+}
+
+body main #work .works li .heading {
+  margin: 0px 0px 16px;
+  font-size: 70px;
+  font-weight: 700;
+  color: #54d7e4;
+}
+
+body main #work .works li .heading span {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+body main #work .works li img {
+  opacity: 1;
+  height: 450px;
+  width: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 500px) {
+  body main #work .works li img {
+    width: 300px;
+    height: 420px;
+  }
+}
+
+body main #work .works li::after {
+  content: "explore";
+  width: 120px;
+  height: 120px;
+  font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  -webkit-transform: translate(0%, -80%);
+          transform: translate(0%, -80%);
+  border-radius: 50%;
+  background-color: #e95499;
+  opacity: 0.9;
+  -webkit-box-shadow: 0 0 24px #e95499;
+          box-shadow: 0 0 24px #e95499;
+}
+
+body main .more {
+  margin: 80px 0px 40px;
+  font-size: 80px;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  display: none;
+  background: url(../images/more.png), #54d7e4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body main #team {
+  padding: 40px 20px;
+  width: 100vw;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+body main #team .members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main #team .members .member {
+  margin: 0px 40px 20px;
+  max-width: 400px;
+  height: auto;
+}
+
+body main #team .members .member img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body main #team .members .member h4 {
+  font-size: 32px;
+  border-bottom: 2px solid white;
+  padding: 8px;
+}
+
+body main #team .members .member p {
+  margin: 12px 8px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 1336px) {
+  body main #team .members .member {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 905px) {
+  body main #team .members .member {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 816px) {
+  body main #team .members .member {
+    -webkit-transform: translateY(0px) !important;
+            transform: translateY(0px) !important;
+  }
+}
+
+@media (max-width: 816px) {
+  body main #team .members {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body main #team .fix {
+  letter-spacing: 4px;
+  font-size: 60px;
+  font-weight: 900;
+  display: none;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 4px #54d7e4;
+  text-align: center;
+}
+
+@media (max-width: 816px) {
+  body main #team .fix {
+    display: block;
+  }
+}
+
+body main #team .page {
+  text-align: center;
+  font-size: 100px;
+  font-weight: 900;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 4px #54d7e4;
+}
+
+body main #team .page b {
+  display: none;
+  padding: 16px;
+}
+
+@media (max-width: 1120px) {
+  body main #team .page b {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1120px) {
+  body main #team .page span {
+    display: none;
+  }
+}
+
+@media (max-width: 1336px) {
+  body main #team .page {
+    font-size: 86px;
+  }
+}
+
+@media (max-width: 905px) {
+  body main #team .page {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 816px) {
+  body main #team .page {
+    display: none !important;
+  }
+}
+
+@media (max-width: 816px) {
+  body main #team {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+body main #contact {
+  width: 100vw;
+  display: none;
+  padding: 12px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  body main #contact {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+body main #contact .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #contact .page {
+  margin: 20px;
+  font-size: 70px;
+  font-weight: 900;
+  color: white;
+  text-align: left;
+  -webkit-transform: translate(-70%);
+          transform: translate(-70%);
+}
+
+body main #contact .page img {
+  width: 140px;
+}
+
+body main #contact .page p {
+  font-size: 80px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 2px #54d7e4;
+}
+
+@media (max-width: 1120px) {
+  body main #contact .page {
+    text-align: center;
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+  }
+}
+
+@media (max-width: 816px) {
+  body main #contact .page {
+    font-size: 60px;
+  }
+}
+
+body main #contact .rotor {
+  -webkit-animation: rotation 20s infinite linear;
+          animation: rotation 20s infinite linear;
+}
+
+body main #contact #spiral {
+  width: 700px;
+  height: auto;
+  -webkit-transition: 400ms ease;
+  transition: 400ms ease;
+}
+
+@media (max-width: 905px) {
+  body main #contact #spiral {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  body main #contact #spiral {
+    max-width: 300px;
+  }
+}
+
+body main #contact .mail {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 40px;
+}
+
+body main #contact .mail p {
+  color: white;
+}
+
+body main #contact .mail .mail-box {
+  margin: 14px 0px 100px;
+}
+
+body main #contact .mail .mail-box p {
+  color: #e95499;
+  margin-top: 28px;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
