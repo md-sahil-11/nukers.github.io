@@ -156,3 +156,9 @@ var parallaxInstance = new Parallax(scene4);
 
 var scene5 = document.getElementById('scene5');
 var parallaxInstance = new Parallax(scene5);
+
+//hover
+
+$('.js-tilt').tilt({
+    scale: 1.2
+})
