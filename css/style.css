@@ -107,6 +107,44 @@ body main #landing .content__title {
           transform: perspective(400px) rotateY(-65deg);
 }
 
+@media (max-width: 905px) {
+  body main #landing .frame__title {
+    display: none;
+  }
+}
+
+body main #landing #button1 {
+  display: none;
+}
+
+body main #landing #button1:focus {
+  outline: none;
+}
+
+@media (max-width: 905px) {
+  body main #landing #button1 {
+    display: -ms-grid;
+    display: grid;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 3px solid #e95499;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    top: 60vh;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    color: #fff;
+    background-color: #e95499;
+  }
+}
+
 body main #about {
   padding: 32px 32px 0px;
   width: 100%;
