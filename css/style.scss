@@ -136,6 +136,43 @@ body {
       .content__title {
         transform: perspective(400px) rotateY(-65deg);
       }
+      
+      #button1 {
+        display: none;
+
+        &:focus {
+          outline: none;
+        }
+
+        @media screen and (max-width: 800px) {
+          display: grid;
+          text-align: center;
+          position: absolute;
+          margin: auto;
+          justify-items: center;
+          align-items: center;
+          border: 3px solid #e95499;
+          border-radius: 50%;
+          height: 120px;
+          width: 120px;
+          top: 480%;
+          left: 80%;
+          color: #fff;
+          background-color: #e95499;
+        }
+
+        @media screen and (max-width: 426px) {
+          left: 70%;
+          height: 100px;
+          width: 100px;
+        }
+
+        @media screen and (max-width: 321px) {
+          left: 65%;
+          height: 100px;
+          width: 100px;
+        }
+      }
     }
 
     #about {
