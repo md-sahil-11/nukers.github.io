@@ -136,7 +136,13 @@ body {
       .content__title {
         transform: perspective(400px) rotateY(-65deg);
       }
-      
+
+      .frame__title {
+        @include tabs {
+          display: none;
+        }
+      }
+
       #button1 {
         display: none;
 
@@ -144,7 +150,7 @@ body {
           outline: none;
         }
 
-        @media screen and (max-width: 800px) {
+        @include tabs {
           display: grid;
           text-align: center;
           position: absolute;
@@ -155,23 +161,13 @@ body {
           border-radius: 50%;
           height: 120px;
           width: 120px;
-          top: 480%;
-          left: 80%;
+          top: 60vh;
+          left: 50%;
+          transform: translate(-50%);
           color: #fff;
           background-color: #e95499;
         }
 
-        @media screen and (max-width: 426px) {
-          left: 70%;
-          height: 100px;
-          width: 100px;
-        }
-
-        @media screen and (max-width: 321px) {
-          left: 65%;
-          height: 100px;
-          width: 100px;
-        }
       }
     }
 
