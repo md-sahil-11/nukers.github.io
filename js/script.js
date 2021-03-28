@@ -54,6 +54,12 @@ if (body.addEventListener) {
     body.addEventListener("DOMMouseScroll", MouseWheelHandler, { passive: false })
 }
 
+document.getElementById("button1").onclick = function() {myFunction()};
+
+    function myFunction() {
+        contentView().then(() => scrollAnim())
+}
+
 const scrollAnim = () => {
     //pass
 }
